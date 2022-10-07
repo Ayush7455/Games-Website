@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        html{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/123.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .game-board{
+            height: 90vmin;
+            width: 90vmin;
+            background: #9DD2EA;
+            display: grid;
+            grid-template-columns: repeat(16, 1fr);
+            grid-template-rows: repeat(16, 1fr);
+        }
+        .score{
+            background-color: #F1FF92;
+            color: #888E5F;
+            padding: 10px 20px;
+            box-shadow: 0px 4px 0px #9da853;
+        }
+
+        .snake{
+            border:2px solid black;
+            background: #8CC64E;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+        .head{
+            background: url(images/snake.png);
+            background-size: 100% 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            z-index: 22;
+        }
+
+        .food{
+            background: url(images/bean.png);
+            background-size: 100% 100%;
+            z-index: 55;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="score"> Score : <span id="score">0</span></h2>
+        <div class="game-board"></div>
+    </div>
+    <script src="gameScript.js"></script>
+</body>
+</html>
